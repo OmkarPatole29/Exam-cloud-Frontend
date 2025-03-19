@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="section">SECTION A</span>
+            <span class="timer">TIME LEFT :- 00:20:25</span>
+            <button class="analysis-btn">QUESTION ANALYSIS</button>
+        </div>
+
+        <div class="question-box">
+            <p class="question">Q1. What is the minimum capital requirement for a new private sector bank in India as per RBI guidelines?</p>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="answer">
+                    <span>200 Crore</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer">
+                    <span>500 Crore</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer">
+                    <span>1000 Crore</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer">
+                    <span>1200 Crore</span>
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button class="prev">PREVIOUS</button>
+                <button class="review">MARK AS REVIEW</button>
+                <button class="next" onclick="goToNextPage()">NEXT</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "page7.html"; // Redirect to the next page
+        }
+    </script>
+
+</body>
+</html>

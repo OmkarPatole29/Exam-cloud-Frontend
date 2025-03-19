@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam Page</title>
+    <link rel="stylesheet" href="styles7.css">
+</head>
+<body>
+
+    <div class="exam-container">
+        <div class="container">
+            <div class="header">
+                <span class="section">SECTION A</span>
+                <span class="timer">TIME LEFT :- 00:20:25</span>
+                <button class="analysis-btn">QUESTION ANALYSIS</button>
+            </div> 
+            <div class="question-section">
+                <h3>Q100. What is the minimum capital required?</h3>
+                <div class="options">
+                    <label><input type="radio" name="answer"> 200 Crore</label>
+                    <label><input type="radio" name="answer"> 500 Crore</label>
+                    <label><input type="radio" name="answer"> 1000 Crore</label>
+                    <label><input type="radio" name="answer"> 1200 Crore</label>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="nav-btn" onclick="goToPreviousPage()">Previous</button>
+                <button class="review-btn">Mark as Review</button>
+                <button class="nav-btn">Next</button>
+                <button class="submit-btn" onclick="openModal()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>SUBMISSION CONFIRMATION</h2>
+            <p>You are trying to submit before time. Are you sure you want to submit your exam? You can’t edit once submitted.</p>
+            <button class="confirm-btn" onclick="submitExam()">Submit</button>
+            <button class="close-btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function goToPreviousPage() {
+            window.location.href = "page3.html"; // Redirect back to the first page
+        }
+
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function submitExam() {
+            // Redirect to submission confirmation page
+            window.location.href = "page.html";
+        }
+    </script>
+
+</body>
+</html>
