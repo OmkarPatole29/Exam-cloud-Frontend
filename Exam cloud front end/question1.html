@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <link rel="stylesheet" href="question1.css"> <!-- Correct path -->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="section">SECTION A</span>
+            <span class="timer">TIME LEFT :- 00:20:25</span>
+            <button class="analysis-btn" onclick="toggleAnalysis()">QUESTION ANALYSIS</button>
+        </div>
+
+        <div class="question-box">
+            <p class="question">Q1. What is the minimum capital requirement for a new private sector bank in India as per RBI guidelines?</p>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="answer">
+                    <span>200 Crore</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer">
+                    <span>500 Crore</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer">
+                    <span>1000 Crore</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer">
+                    <span>1200 Crore</span>
+                </label>
+            </div>
+
+            <div class="buttons">
+                <button class="prev">PREVIOUS</button>
+                <button class="review">MARK AS REVIEW</button>
+                <button class="next" onclick="goToNextPage()">NEXT</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Analysis Panel -->
+    <div class="analysis-panel" id="analysisPanel">
+        <h3>SECTION A</h3>
+        <div class="question-buttons">
+            <button class="qbtn" onclick="redirectToQ1()">Q1</button>
+            <button class="qbtn">Q2</button>
+            <button class="qbtn">Q3</button>
+            <button class="qbtn">Q4</button>
+            <button class="qbtn">Q5</button>
+            <button class="qbtn">Q6</button>
+            <button class="qbtn">Q7</button>
+            <button class="qbtn">Q8</button>
+            <button class="qbtn">Q9</button>
+            <button class="qbtn" onclick="redirectToQ10()">Q10</button>
+            <button class="qbtn">Q11</button>
+            <button class="qbtn">Q12</button>
+            <button class="qbtn">Q13</button>
+            <button class="qbtn">Q14</button>
+            <button class="qbtn" onclick="redirectToQ15()">Q15</button>
+        </div>
+        <div class="status-box">
+            <span class="not-answered">NOT ANSWERED</span>
+            <span class="marked-review">MARKED AS REVIEW</span>
+            <span class="attempted">ATTEMPTED</span>
+        </div>
+        <button class="close-tab" onclick="toggleAnalysis()">CLOSE TAB</button>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "middleque.html";
+        }
+
+        function toggleAnalysis() {
+            const panel = document.getElementById('analysisPanel');
+            panel.classList.toggle('active');
+        }
+        function redirectToQ15() {
+    window.location.href = "last_que.html"; // Change this to your target page
+}
+function redirectToQ10() {
+    window.location.href = "middleque.html"; // Change this to your target page
+}
+function redirectToQ1() {
+    window.location.href = "question1.html"; // Change this to your target page
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Rules</title>
+    <link rel="stylesheet" href="rules.css">
+</head>
+<body>
+    <div class="container">
+        <div class="exam-rules">
+            <h2>EXAM RULES</h2>
+            <div class="rules-box">
+                <ul>
+                    <li>This exam is conducted in Airplane Mode.</li>
+                    <li>If Airplane Mode is turned off or any network change is detected, you will be immediately disqualified.</li>
+                    <li>The exam duration is 60 minutes.</li>
+                    <li>Once the timer ends, the test will be auto-submitted.</li>
+                    <li>Each correct answer carries +4 marks.</li>
+                    <li>Incorrect answers will result in a negative marking of -1 mark.</li>
+                    <li>Any attempt to open other applications or minimize the exam screen will result in auto-submission and rejection.</li>
+                </ul>
+            </div>
+            <div class="agreement">
+                <input type="checkbox" id="agree">
+                <label for="agree">By proceeding, you agree to follow these rules. Any violation will lead to immediate disqualification.</label>
+            </div>
+            <a href="question1.html" class="proceed-btn disabled">PROCEED TO EXAM</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkbox = document.getElementById("agree");
+            const proceedButton = document.querySelector(".proceed-btn");
+
+            checkbox.addEventListener("change", function () {
+                if (this.checked) {
+                    proceedButton.classList.add("enabled");
+                    proceedButton.classList.remove("disabled");
+                } else {
+                    proceedButton.classList.remove("enabled");
+                    proceedButton.classList.add("disabled");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
